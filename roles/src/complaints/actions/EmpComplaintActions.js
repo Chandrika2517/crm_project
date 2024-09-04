@@ -28,7 +28,7 @@ export const fetchComplaints = async (dispatch) => {
   try {
     const token = localStorage.getItem('accessToken');
     console.log("fetch");
-    const response = await axios.get(`${window.location.origin}/roles/getcomplaints`, {
+    const response = await axios.get(`http://localhost:9000/roles/getcomplaints`, {
       headers: {
         "access_token": token
       },
@@ -44,7 +44,7 @@ export const forwardComplaint = async (dispatch, complaint_id) => {
   try {
     const token = localStorage.getItem('accessToken');
     await axios.post(
-      `${window.location.origin}/roles/complaints/forward`,
+      `http://localhost:9000/roles/complaints/forward`,
       { complaint_id },
       {
         headers: {
@@ -62,7 +62,7 @@ export const updateComplaint = async (dispatch, complaint_id, updatedData) => {
   try {
     const token = localStorage.getItem('accessToken');
     const response = await axios.put(
-      `${window.location.origin}/roles/complaints/${complaint_id}`,
+      `http://localhost:9000/roles/complaints/${complaint_id}`,
       updatedData,
       {
         headers: {
@@ -84,7 +84,7 @@ export const reassignComplaint = async (dispatch, complaint_id) => {
   try {
     const token = localStorage.getItem('accessToken');
     await axios.post(
-      `${window.location.origin}/roles/postreinvestigation`,
+      `http://localhost:9000/roles/postreinvestigation`,
       { complaint_id },
       {
         headers: {
@@ -105,7 +105,7 @@ export const reassignComplaintDirectly = async (dispatch, complaint_id, directTo
     const token = localStorage.getItem('accessToken'); // Assuming the token is stored in localStorage
 
     await axios.post(
-      `${window.location.origin}/roles/postreinvestigation`,
+      `http://localhost:9000/roles/postreinvestigation`,
       {
         complaint_id,
         directToEmployee

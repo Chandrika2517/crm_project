@@ -6,7 +6,7 @@ export const addUser = async (dispatch, formData, navigate) => {
     dispatch({ type: ADD_USER_REQUEST });
     console.log("request successful")
     try {
-        const response = await axios.post(`${window.location.origin}/roles/register`, formData);
+        const response = await axios.post(`http://localhost:9000/roles/register`, formData);
         console.log(response)
         dispatch({ type: ADD_USER_SUCCESS, payload: response.data });
 

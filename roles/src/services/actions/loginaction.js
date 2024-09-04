@@ -3,7 +3,7 @@ import { jwtDecode } from 'jwt-decode';
 import { LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, REQUEST } from '../types/logintypes';
 
 // Define the API URL
-const API_URL = `${window.location.origin}/roles/login`;
+const API_URL = `http://localhost:9000/roles/login`;
 
 // Action for login
 export const login = async (formData, dispatch, navigate) => {

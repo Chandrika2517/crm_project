@@ -6,7 +6,7 @@ export const getMyComplaints = async (dispatch) => {
   try {
     setLoading(dispatch);
 
-    const response = await axios.get(`${window.location.origin}/roles/mycomplaints`, {
+    const response = await axios.get(`http://localhost:9000/roles/mycomplaints`, {
       headers: {
         'access_token': localStorage.getItem('accessToken'),
         'Content-Type': 'application/json'

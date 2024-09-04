@@ -249,7 +249,7 @@ const TeamLeadComplaintCards = () => {
 
     const getRoleIdByUserId = async (user_id) => {
         try {
-            const response = await axios.get(`${window.location.origin}/roles/role/${user_id}`);
+            const response = await axios.get(`http://localhost:9000/roles/role/${user_id}`);
             return response.data.role_id;
         } catch (error) {
             console.error('Error fetching role ID:', error);

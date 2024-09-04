@@ -11,7 +11,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get(`${window.location.origin}/roles/getuser`, {
+        const response = await axios.get(`http://localhost:9000/roles/getuser`, {
           headers: {
             'access_token': localStorage.getItem('accessToken'),
             'Content-Type': 'application/json'
