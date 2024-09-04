@@ -10,11 +10,7 @@ const logger = createLogger({
         format.splat(),
         format.json()
     ),
-    defaultMeta: { service: 'admin-service' },
-    transports: [
-        new transports.File({ filename: 'logs/error.log', level: 'error' }),
-        new transports.File({ filename: 'logs/combined.log' }),
-    ],
+    defaultMeta: { service: 'admin-service' }
 });
 
 // If we're not in production then log to the console with the format:
