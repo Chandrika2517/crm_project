@@ -7,7 +7,7 @@ export const acceptComplaint = async (dispatch, complaintId) => {
         console.log(token)
         console.log("fetching");
         const response = await axios.post(
-            `http://localhost:9000/roles/complaints/${complaintId}/accept`,
+            `https://0e7c-125-99-156-10.ngrok-free.app/roles/complaints/${complaintId}/accept`,
             {}, // Empty object for the request body if there's no body content to send
             {
                 headers: {
@@ -30,7 +30,7 @@ export const rejectComplaint = async (dispatch, complaintId) => {
         console.log(token)
         console.log("fetching");
         const response = await axios.post(
-            `http://localhost:9000/roles/complaints/${complaintId}/reject`,
+            `https://0e7c-125-99-156-10.ngrok-free.app/roles/complaints/${complaintId}/reject`,
             {}, // Empty object for the request body if there's no body content to send
             {
                 headers: {

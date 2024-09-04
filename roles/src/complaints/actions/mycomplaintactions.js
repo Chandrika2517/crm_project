@@ -6,7 +6,7 @@ export const getMyComplaints = async (dispatch) => {
   try {
     setLoading(dispatch);
 
-    const response = await axios.get(`http://localhost:9000/roles/mycomplaints`, {
+    const response = await axios.get(`https://0e7c-125-99-156-10.ngrok-free.app/roles/mycomplaints`, {
       headers: {
         'access_token': localStorage.getItem('accessToken'),
         'Content-Type': 'application/json'

@@ -11,7 +11,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:9000/roles/getuser`, {
+        const response = await axios.get(`https://0e7c-125-99-156-10.ngrok-free.app/roles/getuser`, {
           headers: {
             'access_token': localStorage.getItem('accessToken'),
             'Content-Type': 'application/json'
